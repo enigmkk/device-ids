@@ -1,0 +1,20 @@
+using UnityEngine;
+namespace Astra.Device
+{
+    public class IdsPlatform
+    {
+        public virtual void Init()
+        {
+        }
+        public virtual string IDFA{get; set;}
+        public virtual string IDFV{get; set;}
+        public virtual string UUID
+        {
+            get
+            {
+                return SystemInfo.deviceUniqueIdentifier;
+            }
+        }
+        public virtual string GAID{get; set;}
+    }
+}

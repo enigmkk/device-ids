@@ -1,0 +1,21 @@
+{
+  "name": "com.astra.ids",
+  "version": "1.0.0",
+  "displayName": "ids",
+  "description": "Cross-platform native network change monitor for Unity (iOS & Android)",
+  "unity": "2019.4",
+  "author": {
+    "name": "astra",
+    "url": "https://astra.com"
+  },
+  "keywords": [
+    "device id",
+    "ios",
+    "idfa",
+    "idfv",
+    "ATT",
+    "android",
+    "gaid",
+    "native"
+  ]
+}

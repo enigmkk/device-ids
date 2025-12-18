@@ -1,0 +1,5 @@
+{
+  "name": "Astra.DeviceIds.Android",
+  "references": ["Astra.DeviceIds.Runtime"],
+  "includePlatforms": ["Android"]
+}

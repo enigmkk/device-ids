@@ -1,0 +1,19 @@
+{
+    "name": "Astra.DeviceIds.iOS",
+    "rootNamespace": "",
+    "references": [
+        "Astra.DeviceIds.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "iOS"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

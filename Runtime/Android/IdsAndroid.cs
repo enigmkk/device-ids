@@ -1,0 +1,43 @@
+#if UNITY_ANDROID && !UNITY_EDITOR
+using UnityEngine;
+namespace Astra.Device
+{
+    public class IdsAndroid : IdsPlatform, IDeviceIdsBridge
+    {
+        AndroidJavaClass m_bridge;
+        public override void Init()
+        {
+            m_bridge = new AndroidJavaClass("com.astra.ids.DeviceIdsBridge");
+            var proxy = new IdsBridge(this);
+            m_bridge.CallStatic("start", proxy);
+        }
+        private string GetDeviceId()
+        {
+            return m_bridge.CallStatic<string>("getDeviceID");
+        }
+        string m_deviceId = "";
+        public override string UUID
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(m_deviceId))
+                {
+                    m_deviceId = GetDeviceId();
+                }
+                return m_deviceId;
+            }
+        }
+        string m_gaid = "";
+        public override string GAID
+        {
+            get { return m_gaid; }
+        }
+        public void OnGAIDReady(string gaid)
+        {
+            m_gaid = gaid;
+            // 这里可以处理 GAID
+            UnityEngine.Debug.Log("GAID: " + gaid);
+        }
+    }
+}
+#endif
