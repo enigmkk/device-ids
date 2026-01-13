@@ -2,7 +2,7 @@
   "name": "com.astra.ids",
   "version": "1.0.0",
   "displayName": "ids",
-  "description": "Cross-platform native network change monitor for Unity (iOS & Android)",
+  "description": "A cross-platform device ID library, such as Android's GAID, device ID, iOS's corresponding IDFA and IDFV, and UUIDs stored in the keychain.",
   "unity": "2019.4",
   "author": {
     "name": "astra",
